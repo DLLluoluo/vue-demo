@@ -3,23 +3,21 @@
     <div class="aui-list-item">
       <!-- topic图片 -->
       <div class="aui-list-item-img">
-        <img :src="topic_data1.background" alt="" />
+        <img :src="topicInfo.background" alt />
       </div>
       <div class="aui-slide-box">
         <div class="aui-slide-list">
           <ul class="aui-slide-item-list">
             <!-- topic部分 -->
-            <li class="aui-slide-item-item">
-              <a href="ui-product.html" class="v-link">
-                <img class="v-img" src="../assets/img/pd/pd-zf-5.jpg" />
-                <p class="aui-slide-item-title aui-slide-item-f-els">
-                  茵曼2017秋装新款小清新文艺圆领长袖条纹针织衫女套
-                </p>
+            <li class="aui-slide-item-item" v-for="(topic,key) in topicInfo.topicInfo" :key="key">
+              <router-link :to="'./detail/' + topic.id + '?dataName=' + dataName" class="v-link">
+                <img class="v-img" :src="topic.img" />
+                <p class="aui-slide-item-title aui-slide-item-f-els">{{topic.title}}</p>
                 <p class="aui-slide-item-info">
-                  <span class="aui-slide-item-price">¥249</span
-                  >&nbsp;&nbsp;<span class="aui-slide-item-mrk">¥499</span>
+                  <span class="aui-slide-item-price">{{topic.xianjia}}</span>&nbsp;&nbsp;
+                  <span class="aui-slide-item-mrk">{{topic.yuanjia}}</span>
                 </p>
-              </a>
+              </router-link>
             </li>
           </ul>
         </div>
@@ -29,26 +27,21 @@
 </template>
 
 <script>
-import axios from "axios";
 export default {
   data: function() {
-    return {
-      topic_data1: {}
-    };
+    return {};
+  },
+  props: {
+    topicInfo: {
+      type: Object,
+      default: () => {
+        return {};
+      }
+    },
+    dataName: String
   },
   created() {
-    let that = this;
-    axios
-      .get("./static/data/topic.json")
-      .then(function(res) {
-        // console.log(res.data);
-        that.topic_data1 = res.data;
-        console.log(that);
-        console.log(that.topic_data1.background, "数据");
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
+    console.log(this.topicInfo);
   },
   methods: {},
   components: {}

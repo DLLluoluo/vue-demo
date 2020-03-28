@@ -1,3 +1,93 @@
-{
-  "background": "/static/img/pd/cf-4.jpg"
-}
+[{
+    "background": "/static/img/pd/cf-4.jpg",
+    "topicInfo": [{
+        "id": "1",
+        "title": "茵曼2017秋装新款小清新文艺圆领长袖条纹针织衫女套",
+        "img": "/static/img/pd/pd-zf-5.jpg",
+        "xianjia": "¥249",
+        "yuanjia": "¥499"
+      },
+      {
+        "id": "2",
+        "title": "科克兰 盐焗烘烤开心果 1.36千克",
+        "img": "/static/img/pd/sf-9.jpg",
+        "xianjia": "¥99",
+        "yuanjia": "¥189"
+      },
+      {
+        "id": "3",
+        "title": "榙榙 咸鸭蛋黄饼干 80克/袋",
+        "img": "/static/img/pd/sf-10.jpg",
+        "xianjia": "¥12.9",
+        "yuanjia": "¥49"
+      },
+      {
+        "id": "4",
+        "title": "唯他可可 椰子水饮料 330毫升/盒 12盒",
+        "img": "/static/img/pd/sf-11.jpg",
+        "xianjia": "¥189",
+        "yuanjia": "¥299"
+      },
+      {
+        "id": "5",
+        "title": "巴黎水 含气青柠味饮料 330毫升 24",
+        "img": "/static/img/pd/sf-12.jpg",
+        "xianjia": "¥129",
+        "yuanjia": "¥199"
+      },
+      {
+        "id": "6",
+        "title": "calbee 卡乐比 日本进口休闲零食佳可比黄油味薯条 90克/盒",
+        "img": "/static/img/pd/sf-13.jpg",
+        "xianjia": "¥19.9",
+        "yuanjia": "¥49"
+      }
+    ]
+  },
+  {
+    "background": "/static/img/pd/cf-5.jpg",
+    "topicInfo": [{
+        "id": "7",
+        "title": "Whoo 后 秘贴焕然新生精华液护肤礼盒 精华45毫升",
+        "img": "/static/img/pd/sf-15.jpg",
+        "xianjia": "¥349",
+        "yuanjia": "¥499"
+      },
+      {
+        "id": "8",
+        "title": "Sulwhasoo 雪花秀 润燥精华60毫升",
+        "img": "/static/img/pd/sf-16.jpg",
+        "xianjia": "¥99",
+        "yuanjia": "¥198"
+      },
+      {
+        "id": "9",
+        "title": "雅诗兰黛 红石榴护肤三件套 红色正能",
+        "img": "/static/img/pd/sf-17.jpg",
+        "xianjia": "¥399",
+        "yuanjia": "¥999"
+      },
+      {
+        "id": "10",
+        "title": "Whoo 后 拱辰享水 水妍护肤套装",
+        "img": "/static/img/pd/sf-18.jpg",
+        "xianjia": "¥189",
+        "yuanjia": "¥299"
+      },
+      {
+        "id": "11",
+        "title": "惊喜水分套装 持续补水维持平衡",
+        "img": "/static/img/pd/sf-19.jpg",
+        "xianjia": "¥1349",
+        "yuanjia": "¥4199"
+      },
+      {
+        "id": "12",
+        "title": "calbee 卡乐比 日本进口休闲零食佳可比黄油味薯条 90克/盒",
+        "img": "/static/img/pd/sf-13.jpg",
+        "xianjia": "¥19.9",
+        "yuanjia": "¥49"
+      }
+    ]
+  }
+]

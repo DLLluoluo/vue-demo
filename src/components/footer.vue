@@ -30,4 +30,7 @@ export default {};
 </script>
 
 <style>
+.footer {
+  height: 45px;
+}
 </style>
