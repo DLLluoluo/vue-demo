@@ -2,7 +2,12 @@
   <div class="home">
     <Slider></Slider>
     <Meiqian></Meiqian>
-    <Topic v-for="(topic,key) in topic_Array" :key="key" :topicInfo="topic" :dataName="'topic'"></Topic>
+    <Topic
+      v-for="(topic, key) in topic_Array"
+      :key="key"
+      :topicInfo="topic"
+      :dataName="'topic'"
+    ></Topic>
     <Recommend></Recommend>
   </div>
 </template>

@@ -1,22 +1,49 @@
 <template>
-  <div class="aui-scroll-nav">
-    <a href="#" class="aui-scroll-item" v-for="item in NavInfo" :key="item.id">
-      <div class="aui-scroll-item-icon"></div>
-      <div class="aui-scroll-item-text">{{item.name}}</div>
-    </a>
+  <div>
+    <ul class="aui-scroll-nav">
+      <li
+        class="aui-scroll-item"
+        v-for="(item, index) in NavInfo"
+        :key="index"
+        :class="{ feileiNavActive: index == NavItemActive }"
+        @click="returnIdAddress(item.id, index)"
+      >
+        <div class="aui-scroll-item-icon"></div>
+        <div class="aui-scroll-item-text">{{ item.name }}</div>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   data: function() {
-    return {};
+    return {
+      NavItemActive: 0
+    };
   },
   props: {
     NavInfo: Array
+  },
+  methods: {
+    returnIdAddress(id, index) {
+      //使元素滚动到浏览器窗口的可见区域 ——> scrollIntoView()
+      var element = document.getElementById(id);
+      element.scrollIntoView({
+        block: "start"
+      });
+      this.NavItemActive = index;
+    }
   }
 };
 </script>
 
-<style>
+<style scoped>
+.feileiNavActive {
+  background: #fff;
+}
+
+.aui-scroll-nav .feileiNavActive .aui-scroll-item-text {
+  color: #fc6248;
+}
 </style>

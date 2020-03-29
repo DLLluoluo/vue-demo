@@ -1,45 +1,45 @@
 let feileiItem = [{
-    id: 1,
+    id: "a",
     name: "热门推荐"
   },
   {
-    id: 2,
+    id: "b",
     name: "美容彩妆"
   },
   {
-    id: 3,
+    id: "c",
     name: "母婴专区"
   },
   {
-    id: 4,
+    id: "d",
     name: "箱包配饰"
   },
   {
-    id: 5,
+    id: "e",
     name: "家具个护"
   },
   {
-    id: 6,
+    id: "f",
     name: "营养保健"
   },
   {
-    id: 7,
+    id: "g",
     name: "服饰鞋靴"
   },
   {
-    id: 8,
+    id: "h",
     name: "数码家店"
   },
   {
-    id: 9,
+    id: "i",
     name: "运动户外"
   },
   {
-    id: 10,
+    id: "j",
     name: "汽车用品"
   },
   {
-    id: 11,
+    id: "k",
     name: "生活旅行"
   }
 

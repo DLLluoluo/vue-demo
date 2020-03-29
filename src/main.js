@@ -12,11 +12,15 @@ import "./assets/style/home.css";
 import axios from "axios";
 // Vue.prototype.$http = axios;
 
+//引入vuex;
+import store from './store';
+
 Vue.config.productionTip = false;
 
 new Vue({
   el: "#app",
   router: router,
+  store: store,
   components: {
     App
   },
