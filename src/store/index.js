@@ -3,30 +3,47 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 const state = {
-  footerStatus: true
+  footerStatus: true,
+  headerStatus: true
 }
 
 const getters = {
-  isShow(state) {
+  isFooterShow(state) {
     return state.footerStatus;
+  },
+  isHeaderShow(state) {
+    return state.headerStatus;
   }
+
 }
 
 const mutations = {
-  show(state) {
+  showFooter(state) {
     state.footerStatus = true;
   },
-  hide(state) {
+  hideFooter(state) {
     state.footerStatus = false;
+  },
+  showHeader(state) {
+    state.headerStatus = true;
+  },
+  hideHeader(state) {
+    state.headerStatus = false;
   }
 }
 
 const actions = {
   showFooter(context) {
-    context.commit('show');
+    context.commit('showFooter');
   },
   hideFooter(context) {
-    context.commit('hide');
+    context.commit('hideFooter');
+  },
+  showHeader(context) {
+    context.commit('showHeader');
+  },
+  hideHeader(context) {
+    context.commit('hideHeader');
   }
 }
 

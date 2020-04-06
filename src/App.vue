@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <Header v-show="isHeaderShow"></Header>
     <router-view></router-view>
-    <Footer v-show="isShow"></Footer>
+    <Footer v-show="isFooterShow"></Footer>
   </div>
 </template>
 
@@ -18,33 +18,32 @@ export default {
     //   isShow: state => state.footerStatus
     // })
     ...mapGetters({
-      isShow: "isShow"
+      isFooterShow: "isFooterShow",
+      isHeaderShow: "isHeaderShow"
     })
   },
-  // computed: {
-  //   isShow() {
-  //     return this.$store.getters.isShow;
-  //   }
-  // },
+  created() {
+    this.watchRoute(this.$route.path);
+  },
   watch: {
     $route(to, from) {
-      if (to.name == "Car") {
-        this.hideFooter();
-        // this.$store.dispatch('hideFooter')
-      } else {
-        this.showFooter();
-        // this.$store.dispatch('showFooter')
-      }
+      this.watchRoute(to.path);
     }
   },
   methods: {
     ...mapActions({
       hideFooter: "hideFooter",
-      showFooter: "showFooter"
-    })
-  },
-  created() {
-    // console.log($route);
+      showFooter: "showFooter",
+      hideHeader: "hideHeader",
+      showHeader: "showHeader"
+    }),
+    watchRoute(path) {
+      if (/find|car/.test(path)) {
+        this.hideHeader();
+      } else {
+        this.showHeader();
+      }
+    }
   }
 };
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div>
     <footer class="aui-footer-default aui-footer-fixed">
       <router-link to="/home" class="aui-footer-item" active-class="aui-footer-active">
         <span class="aui-footer-item-icon aui-icon aui-footer-icon-home"></span>

@@ -1,5 +1,5 @@
 <template>
-  <div class="header" style="height:45px;">
+  <div style="height:45px;">
     <header class="aui-header-default aui-header-fixed aui-header-bg">
       <a href="#" class="aui-header-item">
         <i class="aui-icon aui-icon-code"></i>

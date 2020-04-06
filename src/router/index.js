@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '../components/home.vue';
 import Fenlei from '../components//feilei/fenlei.vue';
-import Find from '../components/find.vue';
+import Find from '../components/find/find.vue';
 import Car from '../components/car.vue';
 import User from '../components/user.vue';
 import Detail from '../components/detail.vue';

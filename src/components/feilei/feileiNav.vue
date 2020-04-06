@@ -30,7 +30,8 @@ export default {
       //使元素滚动到浏览器窗口的可见区域 ——> scrollIntoView()
       var element = document.getElementById(id);
       element.scrollIntoView({
-        block: "start"
+        block: "start",
+        behavior: "smooth"
       });
       this.NavItemActive = index;
     }
