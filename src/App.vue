@@ -39,7 +39,7 @@ export default {
       showHeader: "showHeader"
     }),
     watchRoute(path) {
-      if (/find|car|user|login|res|/.test(path)) {
+      if (/find|car|user|login|res/.test(path)) {
         this.hideHeader();
       } else {
         this.showHeader();
