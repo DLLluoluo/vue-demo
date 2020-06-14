@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <loading v-show="false"></loading>
     <Header v-show="isHeaderShow"></Header>
     <router-view></router-view>
     <Footer v-show="isFooterShow"></Footer>
@@ -38,10 +39,16 @@ export default {
       showHeader: "showHeader"
     }),
     watchRoute(path) {
-      if (/find|car/.test(path)) {
+      if (/find|car|user|login|res|/.test(path)) {
         this.hideHeader();
       } else {
         this.showHeader();
+      }
+
+      if (/home|find|fenlei|car|user/.test(path)) {
+        this.showFooter();
+      } else {
+        this.hideFooter();
       }
     }
   }

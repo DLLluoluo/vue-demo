@@ -9,11 +9,17 @@ import "./assets/style/icon.css";
 import "./assets/style/home.css";
 
 // 引入数据交互插件  axios
-import axios from "axios";
+// import axios from "axios";
 // Vue.prototype.$http = axios;
 
 //引入vuex;
 import store from './store';
+
+//引入animate库
+import 'animate.css';
+
+import loading from './components/loading/loading.js';
+Vue.use(loading);
 
 Vue.config.productionTip = false;
 

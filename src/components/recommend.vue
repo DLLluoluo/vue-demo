@@ -6,22 +6,30 @@
     <section class="aui-list-product">
       <div class="aui-list-product-box">
         <router-link
-          :to="'/detail/' +  item.id + '?dataName=' + dataName"
+          :to="'/detail/' + item.id + '?dataName=' + dataName"
           class="aui-list-product-item"
-          v-for="(item,key) in listArray"
+          v-for="(item, key) in listArray"
           :key="key"
         >
           <div class="aui-list-product-item-img">
             <img :src="item.img" alt />
           </div>
           <div class="aui-list-product-item-text">
-            <h3>{{item.title}}</h3>
+            <h3>{{ item.title }}</h3>
             <div class="aui-list-product-mes-box">
               <div>
-                <span class="aui-list-product-item-price">{{item.xianjia}}</span>
-                <span class="aui-list-product-item-del-price">{{item.yuanjia}}</span>
+                <span class="aui-list-product-item-price">
+                  {{
+                  item.xianjia
+                  }}
+                </span>
+                <span class="aui-list-product-item-del-price">
+                  {{
+                  item.yuanjia
+                  }}
+                </span>
               </div>
-              <div class="aui-comment">{{item.comment}}</div>
+              <div class="aui-comment">{{ item.comment }}</div>
             </div>
           </div>
         </router-link>

@@ -4,7 +4,10 @@ Vue.use(Vuex);
 
 const state = {
   footerStatus: true,
-  headerStatus: true
+  headerStatus: true,
+  user: {
+    auth: false
+  }
 }
 
 const getters = {
@@ -13,6 +16,9 @@ const getters = {
   },
   isHeaderShow(state) {
     return state.headerStatus;
+  },
+  userInfo(state) {
+    return state.user;
   }
 
 }
@@ -29,6 +35,9 @@ const mutations = {
   },
   hideHeader(state) {
     state.headerStatus = false;
+  },
+  userData(state, payload) {
+    state.user = payload;
   }
 }
 
@@ -44,6 +53,10 @@ const actions = {
   },
   hideHeader(context) {
     context.commit('hideHeader');
+  },
+  updateUser(context, payload) {
+    // console.log(payload);
+    context.commit('userData', payload);
   }
 }
 

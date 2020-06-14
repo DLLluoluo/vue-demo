@@ -1,5 +1,5 @@
 <template>
-  <div class="find" style="padding-bottom:45px;">
+  <div class="find" style="padding-bottom: 45px;">
     <header class="aui-header-default aui-header-fixed aui-header-bg">
       <a href="#" class="aui-header-item">
         <i class="aui-icon aui-icon-code"></i>
@@ -23,13 +23,15 @@
           class="n-tabItem"
           v-for="item in FindList"
           :key="item.id"
-          :class="{findNavcurrent: item.id == findIndex}"
+          :class="{ findNavcurrent: item.id == findIndex }"
           @click="FindSwitch(item.id)"
-        >{{item.name}}</li>
+        >
+          {{ item.name }}
+        </li>
       </ul>
     </section>
 
-    <transition name="component-fade" mode="out-in">
+    <transition enter-active-class="animated fadeIn" leave-active-class="">
       <component :is="change" class="findTopicstyle"></component>
     </transition>
   </div>
@@ -55,12 +57,12 @@ export default {
     list5,
     list6,
     list7,
-    list8
+    list8,
   },
-  data: function() {
+  data: function () {
     return {
       findIndex: 1,
-      FindList: FindList
+      FindList: FindList,
     };
   },
   created() {
@@ -69,13 +71,13 @@ export default {
   methods: {
     FindSwitch(id) {
       this.findIndex = id;
-    }
+    },
   },
   computed: {
     change() {
       return "list" + this.findIndex;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -4,7 +4,9 @@ import Home from '../components/home.vue';
 import Fenlei from '../components//feilei/fenlei.vue';
 import Find from '../components/find/find.vue';
 import Car from '../components/car.vue';
-import User from '../components/user.vue';
+import Login from '../components/login/login.vue';
+import Res from '../components/res/res.vue';
+import User from '../components/user/user.vue';
 import Detail from '../components/detail.vue';
 
 Vue.use(Router)
@@ -35,6 +37,16 @@ export default new Router({
       path: '/car',
       name: 'Car',
       component: Car
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/res',
+      name: 'Res',
+      component: Res
     },
     {
       path: '/user',
